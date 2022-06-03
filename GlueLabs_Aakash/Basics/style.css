@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
+body{
+    background-color: #80d7ff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* define classes by . */
+.box-1{
+    background-color: lightsalmon;
+    padding: 10px;
+}
+
+.box-1 h1{
+    color: rgb(206, 255, 128);
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    letter-spacing: 0.2mm;
+    word-spacing: 0.8mm;
+}
+h3{
+    background-color: lightgoldenrodyellow;
+    color:red;
+    padding: 1%;
+}
+/* div{
+    font-size: 10px;
+} */
+p{
+    color: hsl(355, 75%, 65%);
+    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    line-height: 1.5rem; 
+    /*px - pixel   
+     rem - doesnot depend on direct parent. The default font size of text in browser in p
+     tag is 16px. rem multiplies number in it with 16px
+     em - multiply number in em with font size of parent*/
+}
+/* define ids by # */
+#second-p{
+    color: hsla(165, 75%, 65%, 0.452);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.2rem; 
+}
+#box-model{
+    background-color: lightgreen;
+    width: 300px;
+    border: 15px solid green;
+    margin: 20px;
+    /* padding: 20px; */
+
+    /* padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 15px; */
+
+    /* padding: 20px 15px 20px 15px; */
+    padding: 20px 15px;
+}
+.categories{
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.categories h2{
+    text-align: center;
+}
+.categories ul{
+    padding: 0;
+    list-style: none;
+}
+.categories a{
+    text-decoration: none;
+    color: black;
+}
+.categories a:hover{
+    color: red;
+    text-decoration: line-through;
+}
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #333;
+}
+.my-form{
+    padding: 20px;
+}
+.my-form .form-group{
+    padding-bottom: 15px;
+}
+.my-form label{
+    display: block;
+}
+.my-form input[type="text"], .my-form input[type="email"], .my-form textarea{
+    padding: 8px;
+    width: 100%;
+}
+
+.button{
+    padding: 10px 15px;
+    border: none;
+    background: darkblue;
+    color: #ffe6ff;
+    border-radius: 5px;  /*for rounded edges*/
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button:hover{
+    background: darkmagenta;
+    cursor: pointer;
+}
+
+.block{
+    float: left;
+    width: 33.33%;
+}
+.clearfix{
+    clear: both;
+}
+#main__block{
+    float: left;
+    width: 70%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#side__bar{
+    float: right;
+    width: 30%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.position-box{
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    background-image: url("https://bit.ly/3MsmiXG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.position-box h1{
+    position: absolute;
+    top: 140px;
+    left: 200px;
+}
+.position-box h2{
+    position: absolute;
+    bottom: 40px;
+    right: 200px;
+}
+.fixed-button{
+    position: fixed;
+    top: 20px;
+}
+.my-list li:first-child{
+    background: rebeccapurple;
+}
+.my-list li:last-child{
+    background: royalblue;
+}
+.my-list li:nth-child(3){
+    background: yellowgreen;
+}
+.dynamic-list li:nth-child(even){
+    background: #ffc107;
+}
+.dynamic-list li:nth-child(odd){
+    background: #f4cdda;
+}
+
