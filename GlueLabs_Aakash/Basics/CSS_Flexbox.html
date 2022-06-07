@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlexBox</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            height: 200px;
+            align-items: stretch;
+            justify-content: space-between;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            width: 100px;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 75px;
+        }
+
+        .flex-container-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            align-content: center;
+            justify-content: center;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container-wrap div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        #WrapSection {
+            background-color: bisque;
+            border: 3px solid dodgerblue;
+            margin: 10px 0px;
+        }
+
+        .flex-container-nowrap {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container-nowrap div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-container-wrap-reverse {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container-wrap-reverse div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: black; background-color: bisque; border: 3px solid dodgerblue;">FlexBox CSS</h1>
+    <section id="WrapSection">
+        <h1>Create a flex container</h1>
+    <div class="flex-container">
+        <div>
+            <h1>1</h1>
+        </div>
+        <div>
+            <h6>2</h6>
+        </div>
+        <div>
+            <h3>3</h3>
+        </div>
+        <div><small>4</small></div>
+    </div>
+    <p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+    <p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+    </section>
+
+    <section id="WrapSection">
+        <h1>The flex-wrap Property</h1>
+        <p>The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary:</p>
+        <div class="flex-container-wrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <p>Try resizing the browser window.</p>
+        <p><b>Perfect Centering</b> is when we set both <em>justify-content</em> and <em>align-content</em> to
+            <b>center</b>
+        </p>
+    </section>
+    <section id="WrapSection">
+        <h1>The flex-nowrap Property</h1>
+        <p>The "flex-wrap: nowrap;" specifies that the flex items will not wrap. It is not default:</p>
+        <div class="flex-container-nowrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <p>Try resizing the browser window.</p>
+    </section>
+    <section id="WrapSection">
+        <h1>The flex-wrap-reverse Property</h1>
+        <p>The "flex-wrap: wrap-reverse;" specifies that the flex items will wrap if necessary, in reverse order:</p>
+        <div class="flex-container-wrap-reverse">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <p>Try resizing the browser window.</p>
+    </section>
+
+    <section id="WrapSection">
+        <h1>The order Property</h1>
+        <p>Use the order property to sort the flex items as you like:</p>
+
+        <div class="flex-container">
+            <div style="order: 3">1</div>
+            <div style="order: 2">2</div>
+            <div style="order: 4">3</div>
+            <div style="order: 1">4</div>
+        </div>
+        <p>End</p>
+    </section>
+    <section id="WrapSection">
+        <h1>The flex-grow Property</h1>
+        <p>Make the third flex item grow four times faster than the other flex items:</p>
+
+        <div class="flex-container">
+            <div style="flex-grow: 1">1</div>
+            <div style="flex-grow: 1">2</div>
+            <div style="flex-grow: 4">3</div>
+        </div>
+        <p>End</p>
+    </section>
+    <section id="WrapSection">
+        <h1>The flex-shrink Property</h1>
+        <p>Do not let the third flex item shrink as much as the other flex items:</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex-shrink: 0">3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+        <p>End</p>
+    </section>
+    <section id="WrapSection">
+        <h1>The flex-basis Property</h1>
+        <p>Set the initial length of the third flex item to 200 pixels:</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex-basis:200px">3</div>
+            <div>4</div>
+        </div>
+    </section>
+    <section id="WrapSection">
+        <h1>The flex Property</h1>
+
+        <p>Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels:</p>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="flex: 0 0 200px">3</div>
+            <div>4</div>
+        </div>
+    </section>
+    <section id="WrapSection">
+        <h1>The align-self Property</h1>
+        <p>The "align-self: center;" aligns the selected flex item in the middle of the container:</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div style="align-self: center">3</div>
+            <div>4</div>
+        </div>
+        <p>The align-self property overrides the align-items property of the container.</p>
+    </section>
+    <section id="WrapSection">
+        <h1>The align-self Property</h1>
+        <p>The "align-self: flex-start;" aligns the selected flex item at the top of the container.</p>
+        <p>The "align-self: flex-end;" aligns the selected flex item at the bottom of the container.</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div style="align-self: flex-start">2</div>
+            <div style="align-self: flex-end">3</div>
+            <div>4</div>
+        </div>
+        <p>The align-self property overrides the align-items property of the container.</p>
+    </section>
+</body>
+
+</html>

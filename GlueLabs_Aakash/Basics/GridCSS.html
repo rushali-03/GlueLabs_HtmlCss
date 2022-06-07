@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS_Grid</title>
+</head>
+<style>
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .item3{
+        grid-row: 2/4;
+    }
+    .grid-container{
+        display:grid;
+        grid-template-columns: 80px 200px auto;
+        grid-template-rows: 80px 200px auto;
+        background-color: #2196F3;
+        justify-content: end;
+        height: 500px;
+        align-content: end;
+        padding: 10px;
+        /* column-gap: 10px;
+        row-gap: 10px; 
+        gap: 10px 5px*/
+        gap: 10px;
+    }
+    /* .grid-item{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    } */
+    .grid-container div{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #Sec{
+        background-color: bisque;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <section id="Sec">
+        <h1>display: grid</h1>
+        <p>Use display: grid to make a bloack level grid container:</p>
+        <div class="grid-container">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item7">7</div>
+        </div>
+    </section>
+    <section id="Sec">
+        <h1>display: inline-grid</h1>
+        <p>Use display: inline-grid; to make an inline grid container:</p>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+        </div>
+    </section>
+
+</body>
+</html>
