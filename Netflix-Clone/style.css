@@ -1,0 +1,341 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+header{
+  background-image: url('Netflix-header.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  box-shadow: inset 500px 500px 600px 0px rgba(0,0,0,0.75);
+  border-bottom: 8px solid #222;
+}
+.header-top{
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.logo{
+  margin-right: auto;
+}
+.logo img{
+  width: 250px;
+  height: 110px;
+}
+.lang{
+  display: flex;
+  justify-content: center;
+  border: 1px solid #fff;
+  height: 40px;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 2px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.btn{
+  background-color: red;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  border-radius: 2px;
+  margin-right: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+.btn-start{
+  background-color: red;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  margin-right: 10px;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.btn-start > span{
+  font-size: 30px;
+}
+.header-main{
+  position: relative;
+  width: 100%;
+  padding: 75px 0;
+  max-width: 947px;
+  margin: 0 auto;
+  text-align: center;
+    
+}
+.details{
+  display: flex;
+  height: 60px;
+}
+.details input{
+  display: flex;
+  width: 30rem;
+  padding: 10px;
+  height: 100%;
+  outline: none;
+  flex: 1 0 auto;
+  font-size: large;
+  
+}
+.header-main h1{
+  font-size: 4.5rem;
+}
+.header-main h2{
+  font-size: 1.75rem;
+  font-weight: 100;
+  margin: 10px 0px;
+}
+form h3{
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-top: 5%;
+  margin-bottom: 10px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  display: flex;
+  justify-content: space-around;
+  gap: 10%;
+  align-items: center;
+  background-color: black;
+  border-bottom: 8px solid #222;
+  padding: 5% 15%;
+}
+.card-content h1{
+  font-size: 3rem;
+}
+.card-content h2{
+  font-size: 1.75rem;
+  margin-top: 10px;
+  font-weight: 100;
+}
+.img-class{
+  max-height: 350px;
+  max-width: 600px;
+}
+.card-faq{
+  background-color: black;
+  border-bottom: 8px solid #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.card-faq form{
+  margin-top: 5%;
+  margin-bottom:5%"
+}
+.card-faq>h1{
+  text-align: center;
+  font-size: 3rem;
+  margin: 5% 0;
+}
+.accordian-row{
+  background-color: rgb(54, 53, 53);
+  margin-bottom: 8px;
+  max-width: 750px;
+}
+.accordian{
+  overflow: hidden;
+}
+.accordian-label, .accordian-content{
+  padding: 14px 20px;
+}
+.accordian-label{
+  display: block;
+  cursor: pointer;
+  position: relative;
+  font-size: 2rem;
+  padding-left: 4%;
+}
+.accordian-content{
+  border-top: 3px solid black;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  display: none;
+}
+.accordian-content p{
+  margin-bottom: 10px;
+}
+.accordian-input{
+  display: none;
+}
+.accordian-input:checked ~ .accordian-content{
+  display: block;
+}
+.accordian-label::after{
+  content: "+";
+  position: absolute;
+  right: 1rem;
+}
+.accordian-input:checked + .accordian-label::after{
+  content: "x";
+}
+footer{
+  padding: 5% 20%;
+  background-color: black;
+  color: rgb(88, 86, 86);
+  font-size: small;
+  font-weight: bold;
+}
+.footer-tags{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-tags p{
+  margin:5%;
+}
+.footer-tags-col{
+  margin: 2%;
+}
+footer .lang{
+  width: 100px;
+  height: 40px;
+  border: 1px solid #222;
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 2%;
+}
+@media (max-width: 950px)
+{
+  .card{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+  .card:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .details{
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-start{
+    margin-top: 10px;
+    width: fit-content;
+    height: 20px;
+    font-size: 16px;
+  }
+  .btn-start >span{
+    font-size: 20px;
+  }
+  .card-content h1{
+    font-size: 2rem;
+  }
+  .card-content h2{
+    font-size: 1.25rem;
+  }
+  .btn{
+    height: 30px;
+    padding: 15px;
+  }
+  .lang{
+    height: 30px;
+    padding: 15px 5px;
+  }
+  .header-main h1{
+    font-size: 3rem;
+    margin: 0 15%;
+  }
+  .header-main h2{
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-top: 2%;
+  }
+  .header-main h3{
+    font-size: 1.35rem;
+    padding: 2% 0;
+    margin: 0 25%;
+  }
+  .card-content h1{
+    text-align:center;
+  }
+  .card-content h2{
+    font-weight: 100;
+    text-align:center;
+  }
+  .logo img{
+    width: 190px;
+    height: 80px;
+  }
+  .details input{
+    max-width: 30rem;
+  }
+  .accordian-label{
+    font-size: 1.5;
+  }
+  .accordian-content{
+    font-size: 1.25;
+  }
+  .img-class{
+    padding: 5%;
+    min-width: 1%;
+    overflow: hidden;
+  }
+  .card-faq form h3{
+    font-size: 1.35rem;
+    text-align: center;
+  }
+}
+@media (max-width: 550px)
+{
+  .details > input{
+    max-width: 350px;
+  }
+  .header-main > form > h3{
+    margin: 0;
+  }
+  .img-class{
+    max-width: 350px;
+  }
+  .card-faq h1{
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .accordian-label{
+    font-size: 1.25rem;
+  }
+  .accordian-content{
+    font-size: 1.25rem;
+  }
+  .card-faq form h3{
+    font-size: 1.25rem;
+  }
+  .card-faq form{
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+  .lang{
+    font-size: small;
+    width: 85px;
+  }
+  .lang span:nth-child(1){
+    margin: 0 2px;
+  }
+  .btn{
+    font-size: small;
+    text-align: center;
+  }
+  footer{
+    margin-bottom: 5%;
+  }
+}

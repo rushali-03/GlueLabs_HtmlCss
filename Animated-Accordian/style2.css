@@ -1,0 +1,109 @@
+body{
+  background-color:#ffcde4;
+  margin:0;
+  padding:0;
+  height:1325px;
+  direction:rtl
+}
+.bg-one{
+background-color:#9b59b6;
+}
+
+.bg-two{
+  background-color: #FE6860;
+}
+
+.bg-three{
+  background-color: #23B684;
+}
+
+.bg-four{
+  background-color: #603838;
+}
+
+.bg-five{
+  background-color: #F9BF3B;
+}
+
+.bg-six{
+  background-color: #C25396;
+}
+
+.tabs-box{
+background-color: #3d4a60;
+color:#FFF;
+width:300px;
+margin:40px auto;
+box-shadow:0 0 10px rgba(0,0,0,.3)
+}
+.tabs-box .acord{
+position:relative;
+overflow:hidden;
+
+
+}
+.tabs-box .acord label{
+position:relative;
+z-index: 1000;
+display:block;
+padding:0 40px 0 0;
+}
+.tabs-box .acord label i{
+display:block;
+position:absolute;
+top:0;
+right:0;
+width:40px;
+text-align: center;
+}
+.tabs-box .acord label,
+.tabs-box .acord label i,
+.tabs-box .acord i.fa-chevron-circle-down{
+height:40px;
+line-height: 40px;
+}
+.tabs-box .acord i.fa-chevron-circle-down{
+position:absolute;
+z-index: 1111;
+top:0;
+left:0;
+width: 40px;
+text-align: center;
+-moz-transition:all .2s linear 0s;
+-webkit-transition:all .2s linear 0s;
+transition:all .2s linear 0s;
+}
+
+.tabs-box .acord input{
+display:none;
+}
+
+.tabs-box .content{
+position:relative;
+overflow:hidden;
+-moz-transition:height 1s linear 0s;
+-webkit-transition: height 1s linear 0s;
+transition: height 1s linear 0s;
+height:0;
+font-size:14px;
+line-height:22px;
+color:#e4e4e4;
+text-align:center;
+}
+
+.tabs-box .content span.square{
+display: block;
+position: absolute;
+left: 10px;
+top: -17px;
+width: 20px;
+height: 20px;
+transform: rotate(45deg);
+}
+.tabs-box input[type="checkbox"]:checked ~ div.content{
+height:300px;
+padding:10px;
+}
+.tabs-box input[type="checkbox"]:checked ~ i.fa-chevron-circle-down{
+transform:rotate(180deg);
+}

@@ -1,0 +1,110 @@
+body {
+  background-color: #ffcde4;
+  margin: 0;
+  padding: 0;
+  height: 1325px;
+  direction: rtl;
+}
+
+.bg-one{
+  background-color: #9b59b6;
+}
+
+.bg-two{
+  background-color: #FE6860;
+}
+
+.bg-three{
+  background-color: #23B684;
+}
+
+.bg-four{
+  background-color: #603838;
+}
+
+.bg-five{
+  background-color: #F9BF3B;
+}
+
+.bg-six{
+  background-color: #C25396;
+}
+
+.tabs-box {
+  background-color: #3d4a60;
+  color: #FFF;
+  width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+}
+.acord label:hover{
+  background-color: #39dbb6;
+}
+.tabs-box .acord {
+  position: relative;
+}
+
+.tabs-box .acord label {
+  display: block;
+  text-align: center;
+}
+
+.tabs-box .acord label i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+}
+.tabs-box .acord label:hover .right-icon{
+  animation: shake .2s linear 0s;
+}
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.tabs-box .acord label,
+.tabs-box .acord label i,
+.tabs-box .acord i.fa-chevron-circle-down {
+  height: 40px;
+  line-height: 40px;
+}
+
+.tabs-box .acord label:hover ~ i.fa-chevron-circle-down {
+  transform: rotate(270deg);
+}
+
+.tabs-box .acord i.fa-chevron-circle-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  text-align: center;
+  transition: all .2s linear 0s;
+}
+
+.tabs-box .acord input {
+  display: none;
+}
+
+.tabs-box .content {
+  overflow: hidden;
+  transition: height 0.75s linear 0s;
+  height: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #e4e4e4;
+  text-align: center;
+}
+
+.tabs-box input[type="checkbox"]:checked~div.content {
+  height: 130px;
+  padding: 20px;
+}
+
+.tabs-box input[type="checkbox"]:checked~i.fa-chevron-circle-down {
+  transform: rotate(180deg);
+}
